@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__header">
+        <div class="brand">
+          <div class="brand__icon">✓</div>
+          <div>
+            <h1 class="brand__title">My Tasks</h1>
+            <time class="brand__date" datetime=""></time>
+          </div>
+        </div>
+      </header>
+
+      <section class="card__body">
+        <div class="add-row">
+          <input id="newTask" class="input" placeholder="What do you need to do?" />
+          <button id="addBtn" class="add-btn">+</button>
+        </div>
+
+        <nav class="tabs" role="tablist">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="active">Active</button>
+          <button class="tab" data-filter="completed">Completed</button>
+        </nav>
+
+        <ul id="taskList" class="task-list empty">
+          <li class="empty-state">
+            <div class="empty-icon">📋</div>
+            <div class="empty-text">No tasks here yet</div>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="card__footer">
+        <div id="itemsLeft" class="left">0 items left</div>
+        <button id="clearCompleted" class="clear">Clear completed</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
