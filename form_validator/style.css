@@ -1,0 +1,64 @@
+/* 基本重置 */
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:#f7f7f7;
+  color:#333;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.card{
+  width:360px;
+  background:#fff;
+  padding:28px 28px 20px;
+  border-radius:6px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.04);
+}
+
+.title{
+  text-align:center;
+  margin:0 0 18px;
+  font-size:28px;
+  letter-spacing:0.5px;
+}
+
+.field{ display:block; margin-bottom:14px; }
+.label{ display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#555; }
+input[type="text"], input[type="email"], input[type="password"]{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #e2e2e2;
+  border-radius:3px;
+  background:#fff;
+  transition:box-shadow .12s, border-color .12s;
+}
+input:focus{ outline:none; box-shadow:0 0 0 3px rgba(30,140,240,0.12); border-color:#1e8cf0; }
+
+.error{ color:#c23d3d; font-size:12px; height:14px; display:block; margin-top:6px; }
+
+.btn{
+  display:block;
+  width:100%;
+  padding:10px 14px;
+  background:#1e88e5;
+  color:white;
+  border:0;
+  border-radius:4px;
+  font-weight:600;
+  cursor:pointer;
+}
+.btn:active{ transform:translateY(1px); }
+
+@media (max-width:420px){
+  .card{ width:100%; padding:20px; }
+}

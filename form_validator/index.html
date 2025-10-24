@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <form id="registerForm" class="card" novalidate>
+        <h1 class="title">Register</h1>
+
+        <label class="field">
+          <span class="label">Username</span>
+          <input name="username" type="text" placeholder="Enter username" required minlength="3" />
+          <small class="error" aria-live="polite"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">Email</span>
+          <input name="email" type="email" placeholder="Enter email" required />
+          <small class="error" aria-live="polite"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">Password</span>
+          <input name="password" id="password" type="password" placeholder="Enter password" required minlength="6" />
+          <small class="error" aria-live="polite"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">Confirm Password</span>
+          <input name="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm Password" required />
+          <small class="error" aria-live="polite"></small>
+        </label>
+
+        <button class="btn" type="submit">Register</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
