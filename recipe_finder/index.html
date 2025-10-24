@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-jLKHWMZx0p7+8dG5Qe2b9Y1K1gqQ4Xk5j1l0b2e6mZl5Jk1z1q5Z0e3KfZp1sQ==" crossorigin="anonymous">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1 class="logo"><span class="logo-icon">🍴</span> Recipe Finder</h1>
+      <p class="tagline">Find delicious recipes from around the world</p>
+      <p class="data-source">Data from <a href="https://www.themealdb.com" target="_blank" rel="noopener">TheMealDB</a></p>
+
+      <div class="search-row">
+        <label for="search-input" class="sr-only">Search meals</label>
+        <input id="search-input" type="text" placeholder="Search for meals or keywords" aria-label="Search for meals or keywords">
+        <button id="search-btn" class="btn primary">Search</button>
+      </div>
+
+      <div id="error-container" class="error hidden" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 id="result-heading" class="result-heading"></h2>
+
+    <section id="meals" class="meals-grid" aria-live="polite">
+      <!-- meals will be injected here -->
+    </section>
+
+    <section id="meal-details" class="meal-details hidden" aria-hidden="true">
+      <button id="back-btn" class="btn outline back">← Back to recipes</button>
+      <div class="meal-details-content">
+        <!-- details injected here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; Recipe Finder - Data from TheMealDB</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
