@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+
+    <div class="container">
+      <!-- 开始页 -->
+      <div class="screen active" id="start-screen">
+        <div class="card intro">
+          <h1>Quiz Time!</h1>
+          <p class="subtitle">Test your knowledge with these fun questions</p>
+          <button id="start-btn" class="btn primary">Start Quiz</button>
+        </div>
+      </div>
+
+      <!-- 题目页 -->
+      <div class="screen" id="quiz-screen">
+        <div class="card quiz-card">
+          <h2 id="question-title">What is the capital of France?</h2>
+          <div class="meta-row">
+            <div class="meta">Question <span id="current">1</span> of <span id="total">5</span></div>
+            <div class="meta">Score: <span id="score">0</span></div>
+          </div>
+
+          <div id="choices" class="choices">
+            <!-- choices injected here -->
+          </div>
+
+          <div class="progress-wrap">
+            <div id="progress" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 结果页 -->
+      <div class="screen" id="result-screen">
+        <div class="card result-card">
+          <h1>Quiz Results</h1>
+          <div class="result-box">
+            <p class="result-text">You scored <span id="final-score">0</span> out of <span id="final-total">0</span></p>
+            <p id="result-msg" class="result-msg">Keep studying! You'll get better!</p>
+          </div>
+          <button id="restart-btn" class="btn primary">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
